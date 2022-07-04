@@ -1,6 +1,13 @@
 import sys
 from src.sdir import *
-help = "use these flags: -s,-r,-ra,-l"
+help = '''
+SDIR - saved directory
+use these flags: -s,-r,-ra,-l
+-s\t\tsave current directory
+-r\t\tremove a directory
+-ra\t\tremove all saved directory
+-l\t\tlist all saved directory
+'''
 def main():
 	db = DB()
 	args = sys.argv
