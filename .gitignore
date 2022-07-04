@@ -1,1 +1,3 @@
-*.sqlite3 
+/build 
+sdir.db.sqlite3 
+/dist 
