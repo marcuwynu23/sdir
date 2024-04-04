@@ -1,3 +1,6 @@
-/build 
-sdir.db.sqlite3 
-/dist 
+/build
+sdir.db.sqlite3
+/dist
+*.egg-info
+*.spec
+lib/__pycache__
