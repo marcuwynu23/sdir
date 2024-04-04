@@ -36,6 +36,9 @@ class SDir:
         """
         copy_path_to_clip(self.__db, id)
 
+    def cd(self, id):
+        ch_dir(self.__db, id)
+
     def help(self):
         """Display the help information for all commands."""
         help_table = [
@@ -44,7 +47,8 @@ class SDir:
             ["remove [id]", "Remove a saved directory by its ID."],
             ["remove-all", "Remove all saved directories."],
             ["list", "List all saved directories."],
-            ["clip [id]", "Copy the path of a saved directory to the clipboard."]
+            ["clip [id]", "Copy the path of a saved directory to the clipboard."],
+            ["cd [id]", "change directory by id."]
         ]
         print("SDIR v1.0.0")
         print("Author: Mark Wayne Menorca")

@@ -1,7 +1,8 @@
 
 import sqlite3
-from os import getcwd, path
+from os import getcwd, path, chdir
 from shutil import which
+
 import datetime
 import pyperclip
 from tabulate import tabulate
@@ -91,6 +92,14 @@ def get_directory_by_id(db, id):
     c.execute("SELECT directory FROM Directory WHERE id=?", (id,))
     result = c.fetchone()
     return result
+
+
+def ch_dir(db, id):
+    try:
+        directory = get_directory_by_id(db, id)
+        chdir(directory[0])
+    except Exception as e:
+        print(e)
 
 
 def copy_path_to_clip(db, id):

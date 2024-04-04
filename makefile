@@ -1,14 +1,10 @@
-NAME=sdir
-TEMP=build dist
+FILE=sdir.py
+COMMAND=pyinstaller
+PROD_LOCATION=C:\tool\bin
+
 all:
-	pyinstaller $(NAME).py
-
-run-exe:
-	dist/$(NAME)/$(NAME).exe
-run:
-	python $(NAME).py
-
-
+	$(COMMAND) $(FILE) --onefile
+prod:
+	$(COMMAND) $(FILE) --onefile --distpath $(PROD_LOCATION)
 clean:
-	del $(NAME).spec
-	rd /Q /S $(TEMP)
+	rm -rf build dist sdir.spec
